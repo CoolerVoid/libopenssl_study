@@ -1,0 +1,18 @@
+Simple webserver example with OpenSSL
+
+First step  create certs:
+
+$ openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out testcert.pem
+$ mv testcert.pem keys
+
+or
+
+$ openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout privateKey.key -out certificate.crt
+$ cat certificate.crt privateKey.key > keys/testcert.pem
+
+Now compile:
+
+$ make
+$ sudo bin/serverhttps 8881
+
+Goto browser and put https://127.0.0.1:8881
