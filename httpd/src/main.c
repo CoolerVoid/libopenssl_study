@@ -6,13 +6,7 @@
 #include <arpa/inet.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
-/*
-#include <resolv.h>
-#include <openssl/ssl.h>
-#include <openssl/err.h>
- 
-#define FAIL    -1
- */
+
 #include "serverssl.h"
  
 int main(int count, char *strings[])
